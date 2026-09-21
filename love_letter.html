@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Letter for Acsa ❤️</title>
+
+<style>
+lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:10;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.photos img{
+cursor:pointer;
+transition:0.3s;
+}
+
+.photos img:hover{
+transform:scale(1.05);
+}
+.event{
+opacity:0;
+transform:translateX(-40px);
+transition:1s;
+}
+
+.event.visible{
+opacity:1;
+transform:translateX(0);
+}  
+.signature{
+font-size:28px;
+color:#c2185b;
+text-align:center;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}  
+
+*{
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:"Georgia",serif;
+background:linear-gradient(180deg,#ffdce8,#ffffff);
+color:#444;
+}
+
+/* Cover page */
+
+.cover{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+
+.envelope{
+width:280px;
+height:180px;
+background:#f7b6c8;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+transition:1s;
+}
+
+.envelope.opened{
+transform:translateY(-40px) scale(0.8);
+opacity:0;
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:0;
+border-left:140px solid transparent;
+border-right:140px solid transparent;
+border-top:90px solid #e98aa8;
+transform-origin:top;
+transition:1s;
+}
+
+.envelope.opened:before{
+transform:rotateX(180deg);
+}
+
+
+.heart{
+font-size:50px;
+z-index:2;
+}
+
+
+button{
+margin-top:30px;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+background:#c2185b;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+
+.letter{
+display:none;
+max-width:700px;
+margin:auto;
+padding:20px;
+}
+
+
+.section{
+background:white;
+margin:30px 0;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+
+h1,h2{
+color:#c2185b;
+text-align:center;
+}
+
+
+p{
+font-size:17px;
+line-height:1.8;
+}
+
+
+.photos{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+
+.photos img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+}
+
+
+.timeline{
+border-left:3px solid #c2185b;
+padding-left:20px;
+}
+
+
+.event{
+margin-bottom:25px;
+}
+
+
+.final{
+text-align:center;
+font-size:20px;
+}
+
+
+audio{
+width:100%;
+}
+
+
+@keyframes apparition{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+.open{
+animation:apparition 1.5s ease;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="cover" id="cover">
+
+  <div class="envelope">
+    <div class="heart">❤️</div>
+  </div>
+
+  <h1>A letter for Acsa</h1>
+
+  <p>
+    A little journey through our memories...
+  </p>
+<p>
+  Listen to the music before reading. 
+<p>
+  <button onclick="openLetter()">
+    Open my letter ❤️
+  </button>
+
+</div>
+
+
+<div class="letter" id="letter">
+
+
+<div class="section open">
+
+<h1>For Acsa ❤️</h1>
+<p> 
+NB: you can click on an image to view it below👇
+<p>
+
+<p>
+     •To you, Acsa ❤️
+<p>
+
+<p>
+There are encounters that happen simply, but that eventually come to hold a special place in our story.
+
+Since April 7th, one memory has turned into several precious moments. Through conversations, smiles, thoughtful gestures, and shared moments, a unique bond was gradually built.
+
+This letter is a small capsule of memories, a place where a few traces of what we have experienced and the gratitude I feel for your presence are gathered.
+
+Thank you for your kindness, your attentiveness, and the way you have of bringing something positive to those around you.
+
+Today, these few digital pages are simply a way of telling you: you matter, and some moments deserve to be treasured. ❤️
+<p>
+</div>
+
+
+<div class="section">
+
+<h2>A Few Memories 📸</h2>
+
+<div class="photos">
+
+<img src="IMG-20260514-WA0011.jpg" onclick="zoomImage(this)" alt="Memory 1">
+
+<img src="IMG-20260514-WA0012.jpg" onclick="zoomImage(this)" alt="Memory 2">
+
+<img src="IMG-20260515-WA0017.jpg" onclick="zoomImage(this)" alt="Memory 3">
+
+<img src="IMG-20260520-WA0013.jpg" onclick="zoomImage(this)" alt="Memory 4">
+
+</div>
+
+</div>
+<div class="section">
+
+<h2>Our Story ⏳</h2>
+<p>
+<div class="timeline">
+
+<div class="event">
+<strong>April 7, 2026</strong>
+<p>
+The day our paths crossed for the first time.
+Without imagining what the future had in store for us, a beautiful story was quietly beginning.
+</p>
+</div>
+
+<div class="event">
+<strong>May 11, 2026</strong>
+<p>
+Our relationship officially began.
+From that moment, every conversation, every smile, and every shared moment strengthened this unique bond.
+</p>
+</div>
+
+<div class="event">
+<strong>The following days</strong>
+<p>
+We learned to get to know each other better, support one another, and move forward together despite the challenges.
+Every memory came to enrich our story.
+</p>
+</div>
+
+<div class="event">
+<strong>Today</strong>
+<p>
+This letter is a testament to the gratitude I feel for our journey.
+It doesn't only tell the story of our past, but also expresses the hope of continuing to write new pages together.
+❤️
+</p>
+</div>
+<p>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+
+<h2>A Song for You 🎵</h2>
+
+<audio id="music" loop>
+
+<source src="musique.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<button onclick="playMusic()">
+🎵 Listen to the music
+</button>
+
+</div>
+
+
+
+<div class="section final">
+
+<p>
+Thank you for your presence, your kindness, and all the moments we have shared, My Lady.
+</p>
+
+<p>
+May this letter keep a trace of our memories.
+</p>
+
+<h2 class="signature">
+❤️ From Eliada to Acsa❤️
+</h2>
+
+</div>
+
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+
+<img id="bigImage">
+
+</div>
+
+<script>
+
+function openLetter(){
+
+let envelope = document.querySelector(".envelope");
+
+envelope.classList.add("opened");
+
+setTimeout(()=>{
+
+document.getElementById("cover").style.display="none";
+
+let letter = document.getElementById("letter");
+
+letter.style.display="block";
+
+letter.classList.add("open");
+
+},1000);
+
+}
+
+function playMusic(){
+
+let music = document.getElementById("music");
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+  function zoomImage(img){
+
+document.getElementById("bigImage").src = img.src;
+
+document.getElementById("lightbox").style.display="flex";
+
+}
+
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+</script> 
+const events = document.querySelectorAll(".event");
+
+window.addEventListener("scroll", ()=>{
+
+events.forEach(event=>{
+
+let position = event.getBoundingClientRect().top;
+
+if(position < window.innerHeight - 100){
+
+event.classList.add("visible");
+</script>
+}
+
+});
+
+});
+
+</body>
+
+</html>
+i
